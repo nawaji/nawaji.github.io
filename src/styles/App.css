@@ -1,5 +1,67 @@
-.navitem {
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.centered-content {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.home-name {
+  font-size: 64px;
+}
+
+.home-caption {
+  font-size: 32px;
+}
+
+.home-name, .home-caption {
+  text-align: center;
+  margin: 10px;
+}
+
+.about-picture {
+  max-width: 100px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: beige; /* temporary color to show size of container*/
+
+}
+
+.container .navbar {
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+}
+
+.divider {
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.divider:before, .divider:after {
+  flex: 1;
+  content: '';
+  padding: 1px;
+  background-color: #6D44C1;
+  margin: 5px;
 }
