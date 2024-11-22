@@ -1,17 +1,13 @@
-* {
-  font-family: 'Roboto', sans-serif;
-}
-
 .centered-content {
   margin: 0 auto;
-  max-width: 1000px;
-}
-
-.home {
+  max-width: 680px;
+  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
-  margin-bottom: 60px;
+}
+
+.container {
+  flex-basis: auto;
 }
 
 .home-name {
@@ -24,11 +20,12 @@
 
 .home-name, .home-caption {
   text-align: center;
-  margin: 10px;
+  margin: 0px;
 }
 
 .about-picture {
-  max-width: 100px;
+  max-width: 200px;
+  height: auto;
 }
 
 .navbar {
@@ -44,6 +41,23 @@
   justify-content: space-between;
 }
 
+.container .about {
+  justify-content: space-between;
+}
+
+.about {
+  display: flex;
+  flex-direction: 'column';
+}
+
+.about-text {
+  flex-grow: 1;
+}
+
+.about-picture-frame {
+  flex-grow: 1;
+}
+
 .navbar ul {
   display: flex;
 }
@@ -56,6 +70,9 @@
   font-size: 48px;
   display: flex;
   align-items: center;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .divider:before, .divider:after {
@@ -63,5 +80,13 @@
   content: '';
   padding: 1px;
   background-color: #6D44C1;
-  margin: 5px;
+  margin: 50px;
+}
+
+.divider:before {
+  margin-left: 0px;
+}
+
+.divider:after {
+  margin-right: 0px;
 }
