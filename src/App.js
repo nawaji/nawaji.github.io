@@ -45,7 +45,12 @@ function App() {
           <div className='container'>
             <div className='project-list'>
               <div className='project-card'>
-                <p>test</p>
+                <img src={profile} alt='project'/>
+                <div className='project-title'>Soundbendor Website</div>
+                <ul>
+                  <li><a href='#'>Link</a></li>
+                  <li><a href='#'>Github</a></li>
+                </ul>
               </div>
             </div>
           </div>

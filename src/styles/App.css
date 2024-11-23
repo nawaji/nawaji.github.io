@@ -1,6 +1,6 @@
 .centered-content {
   margin: 0 auto;
-  max-width: 680px;
+  max-width: 700px;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
@@ -33,8 +33,14 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  background-color: beige; /* temporary color to show size of container*/
+}
 
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style-type: none;
 }
 
 .container .navbar {
@@ -58,12 +64,27 @@
   flex-grow: 1;
 }
 
-.navbar ul {
+.project-list {
   display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 20px;
+
+  /* ensure cards are always centered */
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.navbar ul li {
-  list-style-type: none;
+.project-card {
+  outline: #6D44C1 solid 1px;
+  flex-basis: 200px;
+  flex: 1;
+}
+
+.project-card img{
+  width: 100%;
+  height: auto;
 }
 
 .divider {
