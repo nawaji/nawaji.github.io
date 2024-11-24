@@ -1,3 +1,19 @@
+@font-face {
+font-family: "Overused Grotesk";
+src:
+  url("../fonts/OverusedGrotesk-VF.woff2") format("woff2-variations");
+font-weight: 300 900;
+}
+
+* {
+  font-family: 'Overused Grotesk', sans-serif;
+  color: #100A1D;
+}
+
+body {
+  background-color: #FDFCFF;
+}
+
 .centered-content {
   margin: 0 auto;
   max-width: 700px;
@@ -10,12 +26,17 @@
   flex-basis: auto;
 }
 
+.home {
+  margin: 60px auto 60px auto;
+}
+
 .home-name {
   font-size: 64px;
 }
 
 .home-caption {
   font-size: 32px;
+  color: #6D44C1;
 }
 
 .home-name, .home-caption {
@@ -23,29 +44,26 @@
   margin: 0px;
 }
 
-.about-picture {
-  max-width: 200px;
-  height: auto;
-}
-
 .navbar {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: auto;
 }
 
 .navbar ul {
   display: flex;
+  gap: 20px;
 }
 
-.navbar ul li {
+.navbar li {
   list-style-type: none;
+  border-radius: 10px;
+  padding: 10px;
+  outline: #D9D9D9 solid 1px;
 }
 
 .container .navbar {
   justify-content: space-between;
-}
+} 
 
 .container .about {
   justify-content: space-between;
@@ -53,49 +71,97 @@
 
 .about {
   display: flex;
-  flex-direction: 'column';
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin: 20px;
 }
 
-.about-text {
-  flex-grow: 1;
+@media screen and (max-width: 680px) {
+  .about {
+    flex-direction: column;
+    flex-flow: column-reverse;
+    align-items: center;
+  }
 }
 
-.about-picture-frame {
-  flex-grow: 1;
+.about-picture {
+  max-width: 100%;
+  height: 100%;
+  /* box-shadow: 0px 4px 4px rgb(0 0 0 / 25%); */
+  border-radius: 10px;
 }
 
 .project-list {
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 20px;
 
   /* ensure cards are always centered */
   justify-content: center;
   align-items: center;
-  justify-content: space-around;
 }
 
 .project-card {
-  outline: #6D44C1 solid 1px;
-  flex-basis: 200px;
-  flex: 1;
+  outline: #D9D9D9 solid 1px;
+  position: relative;
+  height: 300px;
+  align-content: center;
+  justify-content: center;
+}
+
+.project-title {
+  font-size: 24px;
+  background-color: white;
+  padding: 10px;
+}
+
+.project-links li {
+  list-style-type: none;
+  margin: 0px 10px 0px 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+.project-card, .project-title, .project-links li {
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 10px;
 }
 
 .project-card img{
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  flex-basis: fit-content;
+}
+
+.project-card .project-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.project-card .project-links {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+
+  display: flex;
+  justify-content: space-around;
 }
 
 .divider {
-  font-size: 48px;
+  font-size: 32px;
   display: flex;
   align-items: center;
   text-align: center;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin: 40px auto;
 }
 
+/*
 .divider:before, .divider:after {
   flex: 1;
   content: '';
@@ -111,3 +177,5 @@
 .divider:after {
   margin-right: 0px;
 }
+
+*/
