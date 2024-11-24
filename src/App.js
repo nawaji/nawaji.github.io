@@ -18,7 +18,7 @@ function App() {
         <Navbar />
         <div className='home'>
           <p className='home-name'>Jonathan To</p>
-          <p className='home-caption'>Software Engineering</p>
+          <p className='home-caption'>Software Engineer</p>
         </div>
         <div id='about' className='divider'>About</div>
         <div className='container'>
@@ -50,7 +50,6 @@ function App() {
                 <ProjectCard project={proj} key={proj.title} />
                 </div>
               ))}
-
             </div>
           </div>
         </div>

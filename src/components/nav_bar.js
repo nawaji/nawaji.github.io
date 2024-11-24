@@ -4,8 +4,8 @@ const nav_bar = () => {
           <nav className='navbar'>
             <div class='nav-logo'><a href='#'>JT</a></div>
               <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+              <a href="#about"><li className='int-button'>About</li></a>
+              <a href="#projects"><li className='int-button'>Projects</li></a>
               </ul>
           </nav>
         </header>        

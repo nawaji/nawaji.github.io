@@ -4,13 +4,13 @@ const project_card = ({project}) => {
     let image = project.bgImage
     return (
         <div className='project-card'>
-        <img src={image} alt='project'/>
-        <div className='project-title'>{project.title}</div>
-        <ul className='project-links'>
-        <li><a href={project.sourceLink}>Github</a></li>
-        <li><a href={project.liveLink}>Link</a></li>
-        </ul>
-    </div>
+            <div className='project-title'>{project.title}</div>
+            <img src={image} alt='project'/>
+            <ul className='project-links'>
+            <a href={project.sourceLink}><li className='int-button' >Github<FaLink className='ext-link-icon' /></li></a>
+            <a href={project.liveLink}><li className='int-button'>Website<FaLink className='ext-link-icon' /></li></a>
+            </ul>
+        </div>
     )        
 };
 

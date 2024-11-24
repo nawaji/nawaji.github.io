@@ -22,10 +22,6 @@ body {
   flex-direction: column;
 }
 
-.container {
-  flex-basis: auto;
-}
-
 .home {
   margin: 60px auto 60px auto;
 }
@@ -67,6 +63,10 @@ body {
   outline: #D9D9D9 solid 1px;
 }
 
+.navbar a {
+  text-decoration: none;
+}
+
 .container .navbar {
   justify-content: space-between;
 } 
@@ -86,7 +86,6 @@ body {
 .about-picture {
   max-width: 100%;
   height: 100%;
-  /* box-shadow: 0px 4px 4px rgb(0 0 0 / 25%); */
   border-radius: 10px;
 }
 
@@ -107,12 +106,13 @@ body {
   max-width: 600px;
   align-content: center;
   justify-content: center;
+  max-height: 100%;
 }
 
 .project-title {
   font-size: 24px;
   background-color: white;
-  padding: 10px;
+  padding: 8px;
 }
 
 .project-links li {
@@ -120,11 +120,16 @@ body {
   margin: 0px 10px 0px 10px;
   background-color: white;
   padding: 10px;
+
+}
+
+.project-links {
+  margin: 8px;
 }
 
 .project-card, .project-title, .project-links li {
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .project-card img{
@@ -150,6 +155,14 @@ body {
 
   display: flex;
   justify-content: space-around;
+}
+
+.project-links {
+  padding: 0px;
+}
+
+.project-links a {
+  text-decoration: none;
 }
 
 .divider {
@@ -178,6 +191,14 @@ body {
 }
 */
 
+.int-button {
+  transition-duration: 0.4s;
+}
+
+.int-button:hover {
+  background-color: #D9D9D9;
+}
+
 @media screen and (max-width: 680px) {
   .about {
     flex-direction: column;
@@ -185,17 +206,35 @@ body {
     align-items: center;
   }
 
-  .project-card {
-    height: 100%;
+  .home-name {
+    font-size: 52px;
+  }
+  
+  .home-caption {
+    font-size: 26px;
+  }
+
+  .project-card img{
+    border-radius: 0px;
   }
 
   .project-card .project-title {
-    top: 10px;
-    left: 10px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 0%);
   }
   
   .project-card .project-links {
-    bottom: 10px;
-    right: 10px;
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    justify-content: flex-end;
+  }
+
+  .project-links li {
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 0%);
+    outline: #D9D9D9 solid 1px;
   }
 }
