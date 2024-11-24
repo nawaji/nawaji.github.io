@@ -20,7 +20,7 @@ function App() {
           <p className='home-name'>Jonathan To</p>
           <p className='home-caption'>Software Engineering</p>
         </div>
-        <div className='divider'>About</div>
+        <div id='about' className='divider'>About</div>
         <div className='container'>
           <div className='about'>
             <div className='about-text'>
@@ -31,8 +31,8 @@ function App() {
               <p>
                 Initially, I attended Oregon State to study Mechanical Engineering.
                 Learning MATLAB during my Sophomore year made me realize I would enjoy studying
-                anything computer and software related. More specifically, security related topics
-                such as networking and malware analysis, but also web design.
+                anything computer and software related. I explored security related topics
+                such as penetration testing, and malware analysis during my undergrad education.
 
               </p>
               <p>
@@ -42,7 +42,7 @@ function App() {
             <img src={profile} alt='selfie' className='about-picture' />
           </div>
         </div>
-        <div className='divider'>Projects</div>
+        <div id='projects' className='divider'>Projects</div>
           <div className='container'>
             <div className='project-list'>
               {project_data.map((proj) => (

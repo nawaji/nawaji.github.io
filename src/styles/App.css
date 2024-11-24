@@ -47,6 +47,8 @@ body {
 .navbar {
   display: flex;
   align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .nav-logo {
@@ -102,7 +104,7 @@ body {
 .project-card {
   outline: #D9D9D9 solid 1px;
   position: relative;
-  height: 300px;
+  max-width: 600px;
   align-content: center;
   justify-content: center;
 }
@@ -174,7 +176,6 @@ body {
 .divider:after {
   margin-right: 0px;
 }
-
 */
 
 @media screen and (max-width: 680px) {
