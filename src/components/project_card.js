@@ -6,8 +6,8 @@ const project_card = ({project}) => {
         <img src={image} alt='project'/>
         <div className='project-title'>{project.title}</div>
         <ul className='project-links'>
-          <li><a href={project.sourceLink}>Github</a><FaExternalLinkAlt /></li>
-          <li><a href={project.liveLink}>Link</a><FaExternalLinkAlt /></li>
+          <li><a href={project.sourceLink}>Github</a></li>
+          <li><a href={project.liveLink}>Link</a></li>
         </ul>
       </div>
     )
