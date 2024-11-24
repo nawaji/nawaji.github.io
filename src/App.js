@@ -1,27 +1,21 @@
 import './styles/App.css';
 import profile from './images/profile.jfif'
-import project_img from './images/soundbendor.png'
+import Navbar from './components/nav_bar.js'
+import ProjectCard from './components/project_card.js'
+
+const project_data = require('./data/projects.json')
 
 function App() {
   return (
     <html>
       <head>
-      <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js" />
         <title>
           Jonathan To
         </title>
       </head>
       <body>
         <div className='centered-content'>
-        <header className='container'>
-          <nav className='navbar'>
-            <div class='nav-logo'><a href='#'>Logo</a></div>
-              <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-              </ul>
-          </nav>
-        </header>
+        <Navbar />
         <div className='home'>
           <p className='home-name'>Jonathan To</p>
           <p className='home-caption'>Software Engineering</p>
@@ -42,7 +36,7 @@ function App() {
 
               </p>
               <p>
-                My hobbies include graphic design / design, video games, and photography. 
+                My hobbies include graphic design, multiplayer games, and photography. 
               </p>
             </div>
             <img src={profile} alt='selfie' className='about-picture' />
@@ -51,14 +45,12 @@ function App() {
         <div className='divider'>Projects</div>
           <div className='container'>
             <div className='project-list'>
-              <div className='project-card'>
-                <img src={project_img} alt='project'/>
-                <div className='project-title'>Soundbendor Website</div>
-                <ul className='project-links'>
-                  <li><a href='#'>Link</a></li>
-                  <li><a href='#'>Github</a></li>
-                </ul>
-              </div>
+              {project_data.map((proj) => (
+                <div>
+                <ProjectCard project={proj} key={proj.title} />
+                </div>
+              ))}
+
             </div>
           </div>
         </div>
