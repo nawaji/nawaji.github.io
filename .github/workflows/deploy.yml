@@ -7,6 +7,9 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    env:
+      COMMIT_USER_NAME: GitHub Action Runner
+      COMMIT_USER_EMAIL: support+actions@github.com
     steps:
       - uses: actions/checkout@v3
 
