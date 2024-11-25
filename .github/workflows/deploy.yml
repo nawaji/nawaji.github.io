@@ -26,10 +26,10 @@ jobs:
         with:
           cmd: build # will run `yarn build` command
 
-      - name: Set git name
+      - name: Set git config name
         run: git config user.name "${{ env.COMMIT_USER_NAME }}"
           
-      - name: Set git email
+      - name: Set git config email
         run: git config user.email "${{ env.COMMIT_USER_EMAIL }}"
 
         env:
