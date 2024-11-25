@@ -26,5 +26,12 @@ jobs:
         with:
           cmd: build # will run `yarn build` command
 
+      - name: Set git configs
+        run: |
+          git config user.name "${{ env.COMMIT_USER_NAME }}"
+          git config user.email "${{ env.COMMIT_USER_EMAIL }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Deploy github pages
         run: yarn gh-build
